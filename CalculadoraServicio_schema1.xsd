@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://servicioweb/" xmlns:tns="http://servicioweb/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="PushNumber" nillable="true" type="tns:pushNumber"/>
+
+  <xs:element name="PushNumberResponse" nillable="true" type="tns:pushNumberResponse"/>
+
+  <xs:element name="StackToString" nillable="true" type="tns:stackToString"/>
+
+  <xs:element name="StackToStringResponse" nillable="true" type="tns:stackToStringResponse"/>
+
+  <xs:element name="add" nillable="true" type="tns:add"/>
+
+  <xs:element name="addResponse" nillable="true" type="tns:addResponse"/>
+
+  <xs:element name="div" nillable="true" type="tns:div"/>
+
+  <xs:element name="divResponse" nillable="true" type="tns:divResponse"/>
+
+  <xs:element name="getSize" nillable="true" type="tns:getSize"/>
+
+  <xs:element name="getSizeResponse" nillable="true" type="tns:getSizeResponse"/>
+
+  <xs:element name="getStack" nillable="true" type="tns:stack"/>
+
+  <xs:element name="getStackResponse" nillable="true" type="tns:stackResponse"/>
+
+  <xs:element name="mul" nillable="true" type="tns:multiply"/>
+
+  <xs:element name="mulResponse" nillable="true" type="tns:multiplyResponse"/>
+
+  <xs:element name="ping" nillable="true" type="tns:ping"/>
+
+  <xs:element name="pingResponse" nillable="true" type="tns:pingResponse"/>
+
+  <xs:element name="remainder" nillable="true" type="tns:rem"/>
+
+  <xs:element name="remainderResponse" nillable="true" type="tns:remResponse"/>
+
+  <xs:element name="sqrt" nillable="true" type="tns:sqrt"/>
+
+  <xs:element name="sqrtResponse" nillable="true" type="tns:sqrtResponse"/>
+
+  <xs:element name="sub" nillable="true" type="tns:sub"/>
+
+  <xs:element name="subResponse" nillable="true" type="tns:subResponse"/>
+
+  <xs:complexType name="stack">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="stackResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="rem">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="remResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="sqrt">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="sqrtResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="pushNumber">
+    <xs:sequence>
+      <xs:element name="num" type="xs:double"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="pushNumberResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="multiply">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="multiplyResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="stackToString">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="stackToStringResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ping">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="pingResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="sub">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="subResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="div">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="divResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="add">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="addResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getSize">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="getSizeResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+
